@@ -47,7 +47,7 @@ export default function WhyChooseUs() {
   return (
     <section id="nosotros" className="w-full bg-white py-20 px-6 md:px-12 lg:px-24">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        
+
         {/* Lado Izquierdo: Presentación */}
         <div className="lg:col-span-5 flex flex-col gap-5">
           <span className="text-brand-orange text-xs md:text-sm font-extrabold tracking-widest uppercase">
@@ -57,7 +57,7 @@ export default function WhyChooseUs() {
             {whyChooseUsSection.title}
           </h2>
           <div className="w-16 h-1 bg-brand-orange rounded-full" />
-          
+
           <p className="text-neutral-600 font-medium text-base leading-relaxed mt-2">
             Nos enfocamos en brindar soluciones con los más altos estándares de seguridad y eficiencia. Contamos con equipos de última generación y un equipo humano altamente capacitado para responder a las exigencias de tu obra.
           </p>
@@ -75,9 +75,8 @@ export default function WhyChooseUs() {
           {whyChooseUsSection.items.map((pilar, index) => (
             <div
               key={pilar.id}
-              className={`bg-brand-light p-6 rounded-xl border border-neutral-100 flex flex-col gap-3 transition-all duration-300 hover:shadow-md hover:border-brand-orange/20 ${
-                index === whyChooseUsSection.items.length - 1 ? "sm:col-span-2" : ""
-              }`}
+              className={`bg-blue-50 p-6 rounded-xl border border-blue-100 flex flex-col gap-3 transition-all duration-300 hover:shadow-md hover:border-brand-orange/20 ${index === whyChooseUsSection.items.length - 1 ? "sm:col-span-2" : ""
+                }`}
             >
               <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center shadow-sm border border-neutral-100 shrink-0">
                 {getIcon(pilar.iconName)}

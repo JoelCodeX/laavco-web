@@ -8,7 +8,7 @@ export default function Equipment() {
     const text = encodeURIComponent(
       `Hola LAAVCO, estoy interesado en cotizar el alquiler de: ${equipmentTitle}.`
     );
-    return `https://wa.me/51987654321?text=${text}`;
+    return `https://wa.me/51901884606?text=${text}`;
   };
 
   return (
@@ -33,10 +33,7 @@ export default function Equipment() {
               className="bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden shadow-lg flex flex-col transition-all duration-300 hover:border-brand-orange hover:shadow-2xl hover:shadow-brand-orange/5 group"
             >
               {/* Contenedor de Imagen */}
-              <div className="relative h-44 bg-neutral-950 flex items-center justify-center p-4">
-                {/* Fallback de silueta si la imagen no existe */}
-                <div className="absolute inset-0 bg-gradient-to-b from-neutral-900 to-neutral-950 z-0" />
-                
+              <div className="relative h-44 bg-white flex items-center justify-center p-4">
                 {/* Imagen del equipo */}
                 <div
                   className="absolute inset-0 bg-contain bg-center bg-no-repeat transition-transform duration-300 group-hover:scale-105 z-10 m-4"
@@ -47,7 +44,7 @@ export default function Equipment() {
 
                 {/* Si no hay imagen, un marcador visual */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-10 select-none z-0">
-                  <svg className="w-20 h-20 text-white" fill="none" stroke="currentColor" strokeWidth="1" viewBox="0 0 24 24">
+                  <svg className="w-20 h-20 text-neutral-200" fill="none" stroke="currentColor" strokeWidth="1" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M10.34 15.84c-.68-.34-1.12-1-1.12-1.78V9.94c0-.78.44-1.44 1.12-1.78l5-2.5c.78-.39 1.66.18 1.66.97v5.88c0 .78-.44 1.44-1.12 1.78l-5 2.5z" />
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3.25 15.84c-.68-.34-1.12-1-1.12-1.78V9.94c0-.78.44-1.44 1.12-1.78l5-2.5c.78-.39 1.66.18 1.66.97v5.88c0 .78-.44 1.44-1.12 1.78l-5 2.5z" />
                   </svg>
@@ -60,7 +57,7 @@ export default function Equipment() {
                   <h3 className="text-base font-bold text-white leading-tight group-hover:text-brand-orange transition-colors">
                     {equipment.title}
                   </h3>
-                  
+
                   {/* Lista de Especificaciones */}
                   <ul className="flex flex-col gap-2">
                     {equipment.specs.map((spec, specIdx) => (

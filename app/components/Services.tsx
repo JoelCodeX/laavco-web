@@ -23,10 +23,10 @@ export default function Services() {
             <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
           </svg>
         );
-      case "truck":
+      case "design":
         return (
           <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.129-1.125V11.25M3 14.25h15v3m-15-3V4.875A1.125 1.125 0 014.125 3.75H16.5a1.125 1.125 0 011.125 1.125V14.25m-14.625 0h14.625" />
+            <path strokeLinecap="round" strokeLinejoin="round" d="M21 7.5L12 2.25 3 7.5m18 0v9L12 21.75M3 7.5v9l9 5.25m9-14.25L12 12.75 3 7.5m9 5.25v9" />
           </svg>
         );
       case "crane":

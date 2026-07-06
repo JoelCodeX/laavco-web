@@ -12,28 +12,28 @@ export default function Home() {
     <div className="flex flex-col min-h-screen bg-brand-light">
       {/* Header / Navegación */}
       <Header />
-      
+
       {/* Contenido Principal */}
       <main className="flex-grow">
         {/* Banner Hero */}
         <Hero />
-        
+
         {/* Pilares / Estadísticas */}
         <StatsBar />
-        
-        {/* Servicios */}
-        <Services />
-        
-        {/* Alquiler de Equipos */}
-        <Equipment />
-        
+
         {/* ¿Por Qué Elegirnos? */}
         <WhyChooseUs />
-        
+
+        {/* Servicios */}
+        <Services />
+
+        {/* Alquiler de Equipos */}
+        <Equipment />
+
         {/* Proyectos Realizados */}
         <Projects />
       </main>
-      
+
       {/* Footer y Sección de Contacto */}
       <Footer />
     </div>

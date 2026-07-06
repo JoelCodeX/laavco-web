@@ -36,12 +36,11 @@ export interface ClientItem {
 export const landingData = {
   // Barra de utilidades superior
   topBar: {
-    phone: "987 654 321",
-    email: "ventas@laavco.com",
+    phone: "901 884 606",
+    email: "servicioslaavco@gmail.com",
     socials: {
-      facebook: "https://facebook.com",
-      instagram: "https://instagram.com",
-      linkedin: "https://linkedin.com",
+      facebook: "https://web.facebook.com/LAAVCOMYM/about?locale=es_LA",
+      tiktok: "https://www.tiktok.com/@laavco.pe?is_from_webapp=1&sender_device=pc",
     }
   },
 
@@ -49,7 +48,7 @@ export const landingData = {
   navigation: {
     logoName: "LAAVCO",
     logoSubtitle: "CONSTRUCCIONES & SERVICIOS GENERALES",
-    logoImage: "/images/logo.png", // El usuario lo reemplazará
+    logoImage: "/images/logo.png",
     links: [
       { label: "Inicio", href: "#inicio" },
       { label: "Nosotros", href: "#nosotros" },
@@ -60,7 +59,7 @@ export const landingData = {
     ],
     ctaButton: {
       label: "COTIZAR AHORA",
-      href: "https://wa.me/51987654321?text=Hola,%20quisiera%20solicitar%20una%20cotizaci%C3%B3n."
+      href: "https://wa.me/51901884606?text=Hola,%20quisiera%20solicitar%20una%20cotizaci%C3%B3n."
     }
   },
 
@@ -71,7 +70,7 @@ export const landingData = {
     backgroundImage: "/images/hero-bg.jpg", // Ruta de imagen editable por el usuario
     primaryCta: {
       label: "WHATSAPP",
-      href: "https://wa.me/51987654321?text=Hola,%20deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios."
+      href: "https://wa.me/51901884606?text=Hola,%20deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios."
     },
     secondaryCta: {
       label: "SOLICITAR COTIZACIÓN",
@@ -117,42 +116,42 @@ export const landingData = {
         title: "Construcción Civil",
         description: "Ejecución de obras civiles con altos estándares de calidad.",
         iconName: "building",
-        imagePath: "/images/servicios/construccion.jpg"
+        imagePath: "/servicios/construccion-civil.jpg"
       },
       {
         id: "srv-2",
         title: "Metalmecánica",
         description: "Fabricación y montaje de estructuras metálicas y proyectos industriales.",
         iconName: "wrench",
-        imagePath: "/images/servicios/metalmecanica.jpg"
+        imagePath: "/servicios/metalmecanica.jpg"
       },
       {
         id: "srv-3",
         title: "Electricidad Industrial",
         description: "Instalaciones eléctricas en media y baja tensión, tableros y más.",
         iconName: "bolt",
-        imagePath: "/images/servicios/electricidad.jpg"
+        imagePath: "/servicios/electricidad-industrial.jpg"
       },
       {
         id: "srv-4",
-        title: "Izaje y Transporte",
-        description: "Servicio de izaje, traslado y montaje de cargas pesadas.",
-        iconName: "truck",
-        imagePath: "/images/servicios/izaje.jpg"
+        title: "Diseño 3D y Estructural",
+        description: "Modelado en 3D, planos de ingeniería de detalle y diseño de estructuras.",
+        iconName: "design",
+        imagePath: "/servicios/diseno-3d.jpg"
       },
       {
         id: "srv-5",
         title: "Alquiler de Equipos de Elevación",
         description: "Equipos modernos para trabajos en altura y carga pesada.",
         iconName: "crane",
-        imagePath: "/images/servicios/alquiler.jpg"
+        imagePath: "/servicios/alquiler-equipos.jpg"
       },
       {
         id: "srv-6",
         title: "Mantenimiento Industrial",
         description: "Mantenimiento preventivo y correctivo en plantas e instalaciones.",
         iconName: "settings",
-        imagePath: "/images/servicios/mantenimiento.jpg"
+        imagePath: "/servicios/mantenimiento-industrial.jpg"
       }
     ] as ServiceItem[]
   },
@@ -170,7 +169,7 @@ export const landingData = {
           "Capacidad 320 kg",
           "Uso interior/exterior"
         ],
-        imagePath: "/images/equipos/tijera.png"
+        imagePath: "equipos/elevador.png"
       },
       {
         id: "eq-2",
@@ -180,7 +179,7 @@ export const landingData = {
           "Materiales certificados",
           "Comodidad y ajuste ergonómico"
         ],
-        imagePath: "/images/equipos/arnes.png"
+        imagePath: "equipos/arnes.png"
       },
       {
         id: "eq-3",
@@ -190,7 +189,7 @@ export const landingData = {
           "Alcance horizontal 7.5 m",
           "Ideal para accesos difíciles"
         ],
-        imagePath: "/images/equipos/manlift.png"
+        imagePath: "equipos/manlift-articulado.jpg"
       },
       {
         id: "eq-4",
@@ -200,7 +199,7 @@ export const landingData = {
           "Alcance y precisión garantizada",
           "Operadores calificados"
         ],
-        imagePath: "/images/equipos/camion.png"
+        imagePath: "equipos/grua.png"
       },
       {
         id: "eq-5",
@@ -210,7 +209,7 @@ export const landingData = {
           "Ligera y fácil de transportar",
           "Seguridad garantizada"
         ],
-        imagePath: "/images/equipos/escalera.png"
+        imagePath: "equipos/escalera.png"
       }
     ] as EquipmentItem[]
   },
@@ -279,8 +278,8 @@ export const landingData = {
       },
       {
         id: "proj-4",
-        title: "Montaje e Izaje de Vigas Pesadas",
-        category: "Izaje",
+        title: "Diseño y Modelado Estructural de Naves Industriales",
+        category: "Diseño 3D",
         imagePath: "/images/proyectos/proyecto4.jpg"
       },
       {
@@ -302,13 +301,11 @@ export const landingData = {
   clientsSection: {
     tag: "EMPRESAS QUE CONFÍAN EN NOSOTROS",
     items: [
-      { id: "cli-1", name: "FERREYROS", logoPath: "/images/clientes/ferreyros.svg" },
-      { id: "cli-2", name: "SACYR", logoPath: "/images/clientes/sacyr.svg" },
-      { id: "cli-3", name: "COSAPI", logoPath: "/images/clientes/cosapi.svg" },
-      { id: "cli-4", name: "I JUG", logoPath: "/images/clientes/ijug.svg" },
-      { id: "cli-5", name: "METALSUR", logoPath: "/images/clientes/metalsur.svg" },
-      { id: "cli-6", name: "PROMAES", logoPath: "/images/clientes/promaes.svg" },
-      { id: "cli-7", name: "NEXA RESOURCES", logoPath: "/images/clientes/nexa.svg" }
+      { id: "cli-1", name: "AGROVEX", logoPath: "/clientes/agrovex.png" },
+      { id: "cli-2", name: "CARTAVIO", logoPath: "/clientes/cartavio.png" },
+      { id: "cli-3", name: "CHIMÚ", logoPath: "/clientes/chimu.png" },
+      { id: "cli-4", name: "CUMMINS", logoPath: "/clientes/cummins.png" },
+      { id: "cli-5", name: "TAMBO", logoPath: "/clientes/tambo.png" }
     ] as ClientItem[]
   },
 
@@ -324,9 +321,9 @@ export const landingData = {
     },
     contactInfo: {
       title: "Contáctanos",
-      phone: "987 654 321",
-      email: "ventas@laavco.com",
-      address: "Lima, Perú",
+      phone: "901 884 606",
+      email: "servicioslaavco@gmail.com",
+      address: "Trujillo, Perú",
       website: "www.laavco.com"
     },
     form: {
