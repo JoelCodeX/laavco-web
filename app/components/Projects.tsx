@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import Image from "next/image";
 import { landingData, ProjectItem } from "../data/landingData";
 
 export default function Projects() {
@@ -80,7 +81,7 @@ export default function Projects() {
             </div>
             
             <a
-              href="#contacto"
+              href="/proyectos"
               className="hidden md:inline-block border-2 border-brand-orange hover:bg-brand-orange hover:text-white text-brand-orange text-xs font-bold py-2.5 px-6 rounded-md transition-colors"
             >
               {projectsSection.buttonLabel}
@@ -100,11 +101,12 @@ export default function Projects() {
               className="relative rounded-xl overflow-hidden shadow-md group aspect-[4/3] bg-neutral-900 shrink-0 w-[85%] sm:w-[45%] lg:w-[31.5%] snap-start border border-neutral-100 hover:shadow-xl transition-shadow"
             >
               {/* Imagen de Fondo */}
-              <div
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105 z-0"
-                style={{
-                  backgroundImage: `url('${project.imagePath}')`,
-                }}
+              <Image
+                src={project.imagePath}
+                alt={project.title}
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-105 z-0"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
               {/* Overlay oscuro */}
               <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/90 via-brand-navy/30 to-transparent z-10 opacity-80 group-hover:opacity-90 transition-opacity" />
@@ -125,7 +127,7 @@ export default function Projects() {
         {/* Botón Ver Todos (solo móvil) */}
         <div className="text-center mt-2 md:hidden">
           <a
-            href="#contacto"
+            href="/proyectos"
             className="inline-block border-2 border-brand-orange hover:bg-brand-orange hover:text-white text-brand-orange text-xs font-bold py-3 px-8 rounded-md transition-colors w-full"
           >
             {projectsSection.buttonLabel}

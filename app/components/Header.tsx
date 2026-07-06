@@ -1,12 +1,15 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { landingData } from "../data/landingData";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const { topBar, navigation } = landingData;
+  const pathname = usePathname();
+  const isHome = pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,6 +24,10 @@ export default function Header() {
         return prev;
       });
     };
+    
+    // Check initial scroll position on mount
+    handleScroll();
+    
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -28,8 +35,9 @@ export default function Header() {
   return (
     <header className="w-full flex flex-col z-50 sticky top-0 shadow-md transition-all duration-300">
       {/* Barra de Utilidad Superior (Desktop) */}
-      <div className={`bg-neutral-900 text-neutral-300 text-[10px] sm:text-xs px-4 md:px-12 flex justify-between items-center border-b border-neutral-800 transition-all duration-300 overflow-hidden ${isScrolled ? "max-h-0 py-0 border-none opacity-0" : "max-h-12 py-2 opacity-100"
-        }`}>
+      <div className={`bg-neutral-900 text-neutral-300 text-[10px] sm:text-xs px-4 md:px-12 flex justify-between items-center border-b border-neutral-800 transition-all duration-500 overflow-hidden ${
+        isScrolled ? "md:h-0 md:py-0 md:border-none md:opacity-0 md:pointer-events-none h-8 py-1.5 opacity-100" : "h-8 sm:h-9 py-1 sm:py-2 opacity-100"
+      }`}>
         <div className="flex items-center gap-3 sm:gap-6">
           <a
             href={`tel:${topBar.phone.replace(/\s+/g, "")}`}
@@ -95,10 +103,10 @@ export default function Header() {
       {/* Barra de Navegación Principal */}
       <nav className="bg-white text-neutral-800 py-3.5 px-4 md:px-12 flex justify-between items-center shadow-md relative">
         {/* Logotipo M&M LAAVCO */}
-        <a href="#inicio" className="flex items-center gap-2.5 group">
+        <a href="/" className="flex items-center gap-2.5 group shrink-0">
           {/* Logo Icono Estilizado (M&M Hexágono) */}
-          <img src="/letter-logo.png" alt="Logo" className="h-12 md:h-14 w-auto object-contain" />
-          <img src="/desc-logo.png" alt="Logo" className="h-8 md:h-10 w-auto object-contain" />
+          <img src="/letter-logo.png" alt="Logo" className="h-9 sm:h-12 md:h-14 w-auto object-contain" />
+          <img src="/desc-logo.png" alt="Logo" className="h-6 sm:h-8 md:h-10 w-auto object-contain" />
         </a>
 
         {/* Enlaces de Navegación (Desktop) */}
@@ -136,8 +144,9 @@ export default function Header() {
 
         {/* Botón de Menú Hamburguesa (Mobile) */}
         <button
+          type="button"
           onClick={() => setIsOpen(!isOpen)}
-          className="xl:hidden p-2 text-neutral-700 hover:text-brand-orange transition-colors focus:outline-none"
+          className="xl:hidden p-2 text-neutral-700 hover:text-brand-orange transition-colors focus:outline-none cursor-pointer"
           aria-label="Abrir menú"
         >
           {isOpen ? (

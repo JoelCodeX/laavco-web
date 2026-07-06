@@ -1,13 +1,23 @@
 "use client";
 
+import { useState } from "react";
 import { landingData } from "../data/landingData";
 
 export default function Footer() {
   const { footer, clientsSection, topBar } = landingData;
 
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: ""
+  });
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert("Mensaje enviado con éxito. Nos pondremos en contacto contigo pronto.");
+    const text = `Hola LAAVCO, me gustaría ponerme en contacto.\n\n*Nombre:* ${formData.name}\n*Correo:* ${formData.email}\n*Mensaje:* ${formData.message}`;
+    const whatsappUrl = `https://wa.me/51901884606?text=${encodeURIComponent(text)}`;
+    window.open(whatsappUrl, "_blank");
+    setFormData({ name: "", email: "", message: "" });
   };
 
   return (
@@ -119,18 +129,24 @@ export default function Footer() {
               <input
                 type="text"
                 required
+                value={formData.name}
+                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 placeholder={footer.form.fields.namePlaceholder}
                 className="w-full bg-neutral-800 border border-neutral-700 text-white placeholder-neutral-400 rounded px-3 py-2.5 focus:outline-none focus:border-brand-orange transition-colors"
               />
               <input
                 type="email"
                 required
+                value={formData.email}
+                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 placeholder={footer.form.fields.emailPlaceholder}
                 className="w-full bg-neutral-800 border border-neutral-700 text-white placeholder-neutral-400 rounded px-3 py-2.5 focus:outline-none focus:border-brand-orange transition-colors"
               />
               <textarea
                 required
                 rows={3}
+                value={formData.message}
+                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 placeholder={footer.form.fields.messagePlaceholder}
                 className="w-full bg-neutral-800 border border-neutral-700 text-white placeholder-neutral-400 rounded px-3 py-2.5 focus:outline-none focus:border-brand-orange transition-colors resize-none"
               />

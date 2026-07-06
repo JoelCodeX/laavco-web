@@ -25,6 +25,13 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 96px; /* Altura de la cabecera en mobile */
+}
+
+@media (min-width: 1200px) {
+  html {
+    scroll-padding-top: 132px; /* Altura de la cabecera en desktop */
+  }
 }
 
 body {

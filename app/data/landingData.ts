@@ -50,12 +50,12 @@ export const landingData = {
     logoSubtitle: "CONSTRUCCIONES & SERVICIOS GENERALES",
     logoImage: "/images/logo.png",
     links: [
-      { label: "Inicio", href: "#inicio" },
-      { label: "Nosotros", href: "#nosotros" },
-      { label: "Servicios", href: "#servicios" },
-      { label: "Equipos", href: "#equipos" },
-      { label: "Proyectos", href: "#proyectos" },
-      { label: "Contacto", href: "#contacto" },
+      { label: "Inicio", href: "/#" },
+      { label: "Nosotros", href: "/#nosotros" },
+      { label: "Servicios", href: "/#servicios" },
+      { label: "Equipos", href: "/equipos" },
+      { label: "Proyectos", href: "/proyectos" },
+      { label: "Contacto", href: "/#contacto" },
     ],
     ctaButton: {
       label: "COTIZAR AHORA",
@@ -160,6 +160,7 @@ export const landingData = {
   equipmentSection: {
     tag: "ALQUILER DE EQUIPOS",
     title: "Equipos modernos y seguros",
+    buttonLabel: "VER TODOS LOS EQUIPOS",
     items: [
       {
         id: "eq-1",
@@ -169,7 +170,7 @@ export const landingData = {
           "Capacidad 320 kg",
           "Uso interior/exterior"
         ],
-        imagePath: "equipos/elevador.png"
+        imagePath: "/equipos/elevador.png"
       },
       {
         id: "eq-2",
@@ -179,7 +180,7 @@ export const landingData = {
           "Materiales certificados",
           "Comodidad y ajuste ergonómico"
         ],
-        imagePath: "equipos/arnes.png"
+        imagePath: "/equipos/arnes.png"
       },
       {
         id: "eq-3",
@@ -189,7 +190,7 @@ export const landingData = {
           "Alcance horizontal 7.5 m",
           "Ideal para accesos difíciles"
         ],
-        imagePath: "equipos/manlift-articulado.jpg"
+        imagePath: "/equipos/manlift-articulado.jpg"
       },
       {
         id: "eq-4",
@@ -199,7 +200,7 @@ export const landingData = {
           "Alcance y precisión garantizada",
           "Operadores calificados"
         ],
-        imagePath: "equipos/grua.png"
+        imagePath: "/equipos/grua.png"
       },
       {
         id: "eq-5",
@@ -209,7 +210,7 @@ export const landingData = {
           "Ligera y fácil de transportar",
           "Seguridad garantizada"
         ],
-        imagePath: "equipos/escalera.png"
+        imagePath: "/equipos/escalera.png"
       }
     ] as EquipmentItem[]
   },
@@ -262,44 +263,44 @@ export const landingData = {
         id: "proj-1",
         title: "Estructuras de Acero en Planta Industrial",
         category: "Metalmecánica",
-        imagePath: "/images/proyectos/proyecto1.jpg"
+        imagePath: "/servicios/metalmecanica.jpg"
       },
       {
         id: "proj-2",
         title: "Montaje Mecánico Minero",
         category: "Construcción",
-        imagePath: "/images/proyectos/proyecto2.jpg"
+        imagePath: "/servicios/construccion-civil.jpg"
       },
       {
         id: "proj-3",
         title: "Nave Industrial y Soporte Técnico",
         category: "Metalmecánica",
-        imagePath: "/images/proyectos/proyecto3.jpg"
+        imagePath: "/servicios/metalmecanica.jpg"
       },
       {
         id: "proj-4",
         title: "Diseño y Modelado Estructural de Naves Industriales",
         category: "Diseño 3D",
-        imagePath: "/images/proyectos/proyecto4.jpg"
+        imagePath: "/servicios/diseno-3d.jpg"
       },
       {
         id: "proj-5",
         title: "Tableros de Control de Alta Tensión",
         category: "Electricidad",
-        imagePath: "/images/proyectos/proyecto5.jpg"
+        imagePath: "/servicios/electricidad-industrial.jpg"
       },
       {
         id: "proj-6",
         title: "Mantenimiento Estructural Químico",
         category: "Mantenimiento",
-        imagePath: "/images/proyectos/proyecto6.jpg"
+        imagePath: "/servicios/mantenimiento-industrial.jpg"
       }
     ] as ProjectItem[]
   },
 
   // Sección de Clientes / Marcas que confían
   clientsSection: {
-    tag: "EMPRESAS QUE CONFÍAN EN NOSOTROS",
+    tag: "EMPRESAS QUE CONFÍARON EN NOSOTROS",
     items: [
       { id: "cli-1", name: "AGROVEX", logoPath: "/clientes/agrovex.png" },
       { id: "cli-2", name: "CARTAVIO", logoPath: "/clientes/cartavio.png" },
@@ -316,7 +317,7 @@ export const landingData = {
       subtitle: "Contáctanos y recibe una cotización personalizada.",
       whatsappBtn: {
         label: "WHATSAPP",
-        href: "https://wa.me/51987654321?text=Hola,%20quisiera%20cotizar%20un%20proyecto."
+        href: "https://wa.me/51901884606?text=Hola,%20quisiera%20cotizar%20un%20proyecto."
       }
     },
     contactInfo: {

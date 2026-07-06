@@ -1,6 +1,5 @@
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-import StatsBar from "./components/StatsBar";
 import Services from "./components/Services";
 import Equipment from "./components/Equipment";
 import WhyChooseUs from "./components/WhyChooseUs";
@@ -17,9 +16,6 @@ export default function Home() {
       <main className="flex-grow">
         {/* Banner Hero */}
         <Hero />
-
-        {/* Pilares / Estadísticas */}
-        <StatsBar />
 
         {/* ¿Por Qué Elegirnos? */}
         <WhyChooseUs />

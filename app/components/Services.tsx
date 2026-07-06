@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { landingData } from "../data/landingData";
 
 export default function Services() {
@@ -66,40 +67,41 @@ export default function Services() {
           <div className="w-16 h-1 bg-brand-orange mt-2 rounded-full" />
         </div>
 
-        {/* Cuadrícula de Servicios (Grid 3x2 en desktop, 1 en mobile) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Cuadrícula de Servicios (Grid 3x2 en desktop, 2 en mobile) */}
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-8">
           {servicesSection.items.map((service) => (
             <div
               key={service.id}
               className="group bg-white rounded-xl shadow-md border border-neutral-100 overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl"
             >
               {/* Imagen del Servicio / Contenedor */}
-              <div className="relative h-48 w-full bg-neutral-900 overflow-hidden">
+              <div className="relative h-28 sm:h-48 w-full bg-neutral-900 overflow-hidden">
                 {/* Overlay de degradado */}
                 <div className="absolute inset-0 bg-neutral-900/40 z-10 transition-opacity duration-300 group-hover:bg-neutral-900/20" />
                 {/* Fallback de color de fondo */}
                 <div className="absolute inset-0 bg-gradient-to-tr from-brand-navy/60 to-neutral-700/40" />
                 
                 {/* Imagen real */}
-                <div
-                  className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
-                  style={{
-                    backgroundImage: `url('${service.imagePath}')`,
-                  }}
+                <Image
+                  src={service.imagePath}
+                  alt={service.title}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 33vw"
                 />
 
                 {/* Icono Flotante en la Esquina */}
-                <div className="absolute bottom-4 left-4 z-20 w-10 h-10 bg-brand-orange rounded-full flex items-center justify-center shadow-lg border border-orange-500/30 group-hover:scale-110 transition-transform">
+                <div className="absolute bottom-2.5 left-2.5 sm:bottom-4 sm:left-4 z-20 w-8 h-8 sm:w-10 sm:h-10 bg-brand-orange rounded-full flex items-center justify-center shadow-lg border border-orange-500/30 group-hover:scale-110 transition-transform">
                   {getIcon(service.iconName)}
                 </div>
               </div>
 
               {/* Contenido de Texto */}
-              <div className="p-6 flex flex-col flex-1 gap-2.5">
-                <h3 className="text-lg font-bold text-neutral-900 group-hover:text-brand-orange transition-colors">
+              <div className="p-3.5 sm:p-6 flex flex-col flex-1 gap-1.5 sm:gap-2.5">
+                <h3 className="text-xs sm:text-sm md:text-lg font-bold text-neutral-900 group-hover:text-brand-orange transition-colors min-h-[2rem] sm:min-h-0">
                   {service.title}
                 </h3>
-                <p className="text-sm text-neutral-600 leading-relaxed font-medium">
+                <p className="text-[10px] sm:text-sm text-neutral-600 leading-relaxed font-medium line-clamp-3 sm:line-clamp-none">
                   {service.description}
                 </p>
               </div>
